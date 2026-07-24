@@ -131,7 +131,7 @@ document.querySelectorAll('.back-to-top').forEach(link => {
 const footerLinksMarkup = `
   <div class="social-links footer-socials" aria-label="Tripoint contact and social links">
     <a href="mailto:tripoint.mcl@gmail.com"><img src="assets/gmail.jpg" alt=""><span><small>Email</small><strong>tripoint.mcl@gmail.com</strong></span><b>↗</b></a>
-    <a href="tel:+256781678974"><img src="assets/phone.jpg" alt=""><span><small>Call</small><strong>+256 781 678 974</strong></span><b>↗</b></a>
+    <a href="tel:+256393002945"><img src="assets/phone.jpg" alt=""><span><small>Call</small><strong>0393 002 945</strong></span><b>↗</b></a>
     <a href="https://wa.me/256781678974" target="_blank" rel="noopener"><img src="assets/whatsapp.jpg" alt=""><span><small>WhatsApp</small><strong>Chat with Tripoint</strong></span><b>↗</b></a>
     <a href="https://www.instagram.com/" target="_blank" rel="noopener"><img src="assets/instagram.jpg" alt=""><span><small>Instagram</small><strong>@tripoint.mcl</strong></span><b>↗</b></a>
     <a href="https://www.tiktok.com/" target="_blank" rel="noopener"><img src="assets/tiktok.jpg" alt=""><span><small>TikTok</small><strong>@tripoint.mcl</strong></span><b>↗</b></a>
@@ -154,7 +154,7 @@ const contactPanel = document.querySelector('.contact-page .contact-panel');
 if (contactPanel) {
   contactPanel.innerHTML = `
     <a href="mailto:tripoint.mcl@gmail.com"><img src="assets/gmail.jpg" alt=""><span><small>Email</small><strong>tripoint.mcl@gmail.com</strong></span><b>↗</b></a>
-    <a href="tel:+256781678974"><img src="assets/phone.jpg" alt=""><span><small>Call</small><strong>+256 781 678 974</strong></span><b>↗</b></a>
+    <a href="tel:+256393002945"><img src="assets/phone.jpg" alt=""><span><small>Call</small><strong>0393 002 945</strong></span><b>↗</b></a>
     <a href="https://wa.me/256781678974" target="_blank" rel="noopener"><img src="assets/whatsapp.jpg" alt=""><span><small>WhatsApp</small><strong>Message us</strong></span><b>↗</b></a>
     <a href="https://www.google.com/maps/search/?api=1&query=Arua+City+Uganda" target="_blank" rel="noopener"><img src="assets/maps.jpg" alt=""><span><small>Head office</small><strong>Arua City, Uganda</strong></span><b>↗</b></a>
     <div class="contact-panel-socials"><span>Follow Tripoint</span>${contactSocialLinksMarkup}</div>`;

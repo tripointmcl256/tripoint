@@ -1,0 +1,139 @@
+media:
+  - name: images
+    label: Website images
+    input: assets/uploads
+    output: /assets/uploads
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: gallery
+    label: Gallery images
+    type: file
+    path: content/gallery.json
+    format: json
+    list: true
+    fields:
+      - name: image
+        label: Image
+        type: image
+        required: true
+        options:
+          media: images
+      - name: caption
+        label: Caption
+        type: string
+        required: true
+        options:
+          maxlength: 100
+      - name: alt
+        label: Image description
+        type: string
+        required: true
+        description: Describe the image for people using screen readers.
+        options:
+          maxlength: 160
+      - name: category
+        label: Category
+        type: string
+        required: true
+        options:
+          maxlength: 40
+      - name: layout
+        label: Card size
+        type: select
+        required: true
+        default: standard
+        options:
+          values:
+            - name: standard
+              label: Standard
+            - name: wide
+              label: Wide
+            - name: tall
+              label: Tall
+      - name: published
+        label: Show on website
+        type: boolean
+        default: true
+
+  - name: blog
+    label: Blog posts
+    type: file
+    path: content/blog.json
+    format: json
+    list: true
+    fields:
+      - name: slug
+        label: URL name
+        type: string
+        required: true
+        description: Lowercase words separated by hyphens, for example building-stronger-systems.
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: Use lowercase letters, numbers and hyphens only.
+      - name: title
+        label: Title
+        type: string
+        required: true
+        options:
+          maxlength: 120
+      - name: category
+        label: Category
+        type: string
+        required: true
+        options:
+          maxlength: 50
+      - name: date
+        label: Publication date
+        type: date
+        default: ""
+        options:
+          format: yyyy-MM-dd
+      - name: excerpt
+        label: Short introduction
+        type: text
+        required: true
+        options:
+          minlength: 30
+          maxlength: 240
+      - name: image
+        label: Cover image
+        type: image
+        required: true
+        options:
+          media: images
+      - name: image_alt
+        label: Cover image description
+        type: string
+        required: true
+        options:
+          maxlength: 160
+      - name: body
+        label: Article body
+        type: rich-text
+        required: true
+        options:
+          format: html
+          media: images
+          path: blog
+          rename: safe
+      - name: featured
+        label: Feature at the top
+        type: boolean
+        default: false
+      - name: published
+        label: Show on website
+        type: boolean
+        default: true
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: app
+    templates:
+      create: "Add {name} via Pages CMS"
+      update: "Update {name} via Pages CMS"
+      delete: "Remove {name} via Pages CMS"
+      rename: "Rename {oldFilename} to {newFilename} via Pages CMS"

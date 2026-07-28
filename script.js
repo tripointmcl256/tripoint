@@ -216,11 +216,160 @@ if (contactPanel) {
     <div class="contact-panel-socials"><span>Follow Tripoint</span>${contactSocialLinksMarkup}</div>`;
 }
 
+const fetchCmsData = async path => {
+  const response = await fetch(path, { cache: 'no-store' });
+  if (!response.ok) throw new Error(`Unable to load ${path}`);
+  const data = await response.json();
+  if (!Array.isArray(data)) throw new Error(`${path} must contain a list`);
+  return data;
+};
+
+const galleryGrid = document.querySelector('#cms-gallery-grid');
+if (galleryGrid) {
+  fetchCmsData('content/gallery.json').then(items => {
+    const visibleItems = items.filter(item => item?.published !== false && item?.image && item?.caption);
+    if (!visibleItems.length) return;
+
+    const fragment = document.createDocumentFragment();
+    visibleItems.forEach(item => {
+      const card = document.createElement('button');
+      const layout = ['wide', 'tall'].includes(item.layout) ? ` gallery-card-${item.layout}` : '';
+      card.className = `gallery-card${layout}`;
+      card.type = 'button';
+      card.dataset.gallerySrc = item.image;
+      card.dataset.galleryCaption = item.caption;
+
+      const image = document.createElement('img');
+      image.src = item.image;
+      image.alt = item.alt || item.caption;
+      image.loading = 'lazy';
+
+      const label = document.createElement('span');
+      const category = document.createElement('small');
+      category.textContent = item.category || 'Tripoint';
+      const caption = document.createElement('strong');
+      caption.textContent = item.caption;
+      const action = document.createElement('b');
+      action.textContent = 'View ↗';
+      label.append(category, caption, action);
+      card.append(image, label);
+      fragment.append(card);
+    });
+
+    galleryGrid.replaceChildren(fragment);
+  }).catch(() => {
+    // Keep the built-in gallery visible if CMS data is temporarily unavailable.
+  });
+}
+
+const sanitiseCmsHtml = html => {
+  const template = document.createElement('template');
+  template.innerHTML = String(html || '');
+  template.content.querySelectorAll('script,style,iframe,object,embed,form').forEach(element => element.remove());
+  template.content.querySelectorAll('*').forEach(element => {
+    [...element.attributes].forEach(attribute => {
+      const name = attribute.name.toLowerCase();
+      const value = attribute.value.trim().toLowerCase();
+      if (name.startsWith('on') || ((name === 'href' || name === 'src') && value.startsWith('javascript:'))) {
+        element.removeAttribute(attribute.name);
+      }
+    });
+  });
+  return template.innerHTML;
+};
+
+const formatCmsDate = value => {
+  if (!value) return '';
+  const date = new Date(`${value}T00:00:00`);
+  if (Number.isNaN(date.getTime())) return '';
+  return new Intl.DateTimeFormat('en-UG', { day: 'numeric', month: 'short', year: 'numeric' }).format(date);
+};
+
+const blogGrid = document.querySelector('#cms-blog-grid');
+const featuredInsight = document.querySelector('#cms-featured-insight');
+if (blogGrid) {
+  fetchCmsData('content/blog.json').then(items => {
+    const visiblePosts = items
+      .filter(item => item?.published !== false && item?.title && item?.image && item?.body)
+      .sort((a, b) => {
+        const aTime = a.date ? new Date(a.date).getTime() : 0;
+        const bTime = b.date ? new Date(b.date).getTime() : 0;
+        return bTime - aTime;
+      });
+    if (!visiblePosts.length) return;
+
+    const fragment = document.createDocumentFragment();
+    visiblePosts.forEach(post => {
+      const slug = String(post.slug || post.title)
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+      const article = document.createElement('article');
+      article.className = 'blog-card';
+      article.id = `post-${slug}`;
+      if (String(post.image).includes('boardroom')) article.classList.add('blog-card-contain');
+
+      const figure = document.createElement('figure');
+      const image = document.createElement('img');
+      image.src = post.image;
+      image.alt = post.image_alt || post.title;
+      image.loading = 'lazy';
+      figure.append(image);
+
+      const content = document.createElement('div');
+      const meta = document.createElement('span');
+      const formattedDate = formatCmsDate(post.date);
+      meta.textContent = [post.category, formattedDate].filter(Boolean).join(' · ');
+      const title = document.createElement('h3');
+      title.textContent = post.title;
+      const excerpt = document.createElement('p');
+      excerpt.textContent = post.excerpt || '';
+
+      const details = document.createElement('details');
+      const summary = document.createElement('summary');
+      summary.append(document.createTextNode('Read article '));
+      const plus = document.createElement('b');
+      plus.textContent = '+';
+      summary.append(plus);
+      const body = document.createElement('div');
+      body.className = 'cms-article-body';
+      body.innerHTML = sanitiseCmsHtml(post.body);
+      details.append(summary, body);
+      content.append(meta, title, excerpt, details);
+      article.append(figure, content);
+      fragment.append(article);
+    });
+    blogGrid.replaceChildren(fragment);
+
+    if (featuredInsight) {
+      const featuredPost = visiblePosts.find(post => post.featured) || visiblePosts[0];
+      const featuredSlug = String(featuredPost.slug || featuredPost.title)
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+      const image = featuredInsight.querySelector('img');
+      const label = featuredInsight.querySelector('span');
+      const title = featuredInsight.querySelector('h2');
+      const excerpt = featuredInsight.querySelector('p');
+      const link = featuredInsight.querySelector('a');
+      image.src = featuredPost.image;
+      image.alt = featuredPost.image_alt || featuredPost.title;
+      label.textContent = 'Featured perspective';
+      title.textContent = featuredPost.title;
+      excerpt.textContent = featuredPost.excerpt || '';
+      link.href = `#post-${featuredSlug}`;
+    }
+  }).catch(() => {
+    // Keep the built-in article previews visible if CMS data is temporarily unavailable.
+  });
+}
+
 const galleryLightbox = document.querySelector('.gallery-lightbox');
-const galleryTriggers = document.querySelectorAll('[data-gallery-src]');
 let activeGalleryTrigger;
 
-if (galleryLightbox && galleryTriggers.length) {
+if (galleryLightbox) {
   const lightboxImage = galleryLightbox.querySelector('img');
   const lightboxCaption = galleryLightbox.querySelector('figcaption');
   const lightboxClose = galleryLightbox.querySelector('.lightbox-close');
@@ -230,28 +379,29 @@ if (galleryLightbox && galleryTriggers.length) {
       galleryLightbox.close();
     } else {
       galleryLightbox.removeAttribute('open');
+      activeGalleryTrigger?.focus({ preventScroll: true });
     }
-    activeGalleryTrigger?.focus({ preventScroll: true });
   };
 
-  galleryTriggers.forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      activeGalleryTrigger = trigger;
-      lightboxImage.src = trigger.dataset.gallerySrc;
-      lightboxImage.alt = trigger.querySelector('img')?.alt || '';
-      lightboxCaption.textContent = trigger.dataset.galleryCaption || '';
+  document.addEventListener('click', event => {
+    const trigger = event.target.closest('[data-gallery-src]');
+    if (!trigger) return;
+    activeGalleryTrigger = trigger;
+    lightboxImage.src = trigger.dataset.gallerySrc;
+    lightboxImage.alt = trigger.querySelector('img')?.alt || '';
+    lightboxCaption.textContent = trigger.dataset.galleryCaption || '';
 
-      if (typeof galleryLightbox.showModal === 'function') {
-        galleryLightbox.showModal();
-      } else {
-        galleryLightbox.setAttribute('open', '');
-      }
-      lightboxClose?.focus({ preventScroll: true });
-    });
+    if (typeof galleryLightbox.showModal === 'function') {
+      galleryLightbox.showModal();
+    } else {
+      galleryLightbox.setAttribute('open', '');
+    }
+    lightboxClose?.focus({ preventScroll: true });
   });
 
   lightboxClose?.addEventListener('click', closeLightbox);
   galleryLightbox.addEventListener('click', event => {
     if (event.target === galleryLightbox) closeLightbox();
   });
+  galleryLightbox.addEventListener('close', () => activeGalleryTrigger?.focus({ preventScroll: true }));
 }

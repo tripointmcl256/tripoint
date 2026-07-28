@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "implementation-gap",
+    "title": "From plans to delivery: closing the implementation gap",
+    "category": "Strategy & delivery",
+    "date": "",
+    "excerpt": "Strong plans fail when ownership, coordination and feedback are treated as afterthoughts.",
+    "image": "/assets/1000597049.jpg",
+    "image_alt": "A business leader balancing several priorities",
+    "body": "<p>Implementation improves when every priority has a responsible owner, a visible milestone and a practical way to learn from results.</p><p>The goal is not more reporting—it is faster, better-informed action supported by clear coordination and honest feedback.</p>",
+    "featured": true,
+    "published": true
+  },
+  {
+    "slug": "useful-monitoring-frameworks",
+    "title": "What makes a monitoring framework genuinely useful?",
+    "category": "Monitoring & learning",
+    "date": "",
+    "excerpt": "A measurement system should support decisions, not simply satisfy a reporting requirement.",
+    "image": "/assets/1000597053.jpg",
+    "image_alt": "A project management system",
+    "body": "<p>Useful frameworks focus on a small set of meaningful questions, assign clear responsibility for data quality and connect findings to regular management conversations.</p><p>Good monitoring helps teams notice change, understand why it is happening and decide what to do next.</p>",
+    "featured": false,
+    "published": true
+  },
+  {
+    "slug": "systems-that-survive-transitions",
+    "title": "Building systems that survive leadership transitions",
+    "category": "Institutions",
+    "date": "",
+    "excerpt": "Institutional strength lives in shared routines, clear roles and information that others can use.",
+    "image": "/assets/hero-boardroom-city-3d.png",
+    "image_alt": "A boardroom and city representing an institution",
+    "body": "<p>Resilient organisations reduce dependence on individual memory. They document critical processes, develop capable teams and review systems often enough to keep them practical.</p><p>Strong systems make good performance repeatable—even when people and priorities change.</p>",
+    "featured": false,
+    "published": true
+  },
+  {
+    "slug": "participation-improves-programme-design",
+    "title": "Why participation improves programme design",
+    "category": "Participation",
+    "date": "",
+    "excerpt": "Co-design is not a workshop ritual; it is a way to uncover constraints before they become failures.",
+    "image": "/assets/1000597042.jpg",
+    "image_alt": "A handshake representing partnership",
+    "body": "<p>When users, implementers and decision-makers shape a solution together, assumptions become visible earlier and the final design is more realistic, inclusive and easier to adopt.</p><p>Participation works best when it influences real choices rather than simply confirming decisions already made.</p>",
+    "featured": false,
+    "published": true
+  },
+  {
+    "slug": "market-linkage-for-local-enterprise",
+    "title": "Market linkage as infrastructure for local enterprise",
+    "category": "Enterprise",
+    "date": "",
+    "excerpt": "Access to markets depends on information, trust, standards and relationships—not introductions alone.",
+    "image": "/assets/1000597043.jpg",
+    "image_alt": "Investment resources held in a hand",
+    "body": "<p>Effective linkage work helps enterprises understand demand, improve reliability, prepare for negotiation and build repeatable channels that continue beyond a single transaction.</p><p>Durable market access grows from capability, credible relationships and consistent delivery.</p>",
+    "featured": false,
+    "published": true
+  },
+  {
+    "slug": "evidence-for-everyday-decisions",
+    "title": "Making evidence useful for everyday decisions",
+    "category": "Evidence",
+    "date": "",
+    "excerpt": "The best evidence is credible enough to trust and simple enough to act on.",
+    "image": "/assets/1000597037.jpg",
+    "image_alt": "A consultant examining evidence",
+    "body": "<p>Teams use evidence when it arrives at the right moment, answers a real management question and is presented with clear implications rather than a long list of observations.</p><p>Evidence becomes valuable when it changes a decision, strengthens accountability or helps people act with greater confidence.</p>",
+    "featured": false,
+    "published": true
+  }
+]

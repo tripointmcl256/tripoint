@@ -1,0 +1,50 @@
+[
+  {
+    "image": "/assets/hero-handshake-background.jpg",
+    "caption": "Partnership and shared purpose",
+    "alt": "Business partners shaking hands",
+    "category": "Partnership",
+    "layout": "wide",
+    "published": true
+  },
+  {
+    "image": "/assets/hero-boardroom-city-3d.png",
+    "caption": "Management, coordination and collective decisions",
+    "alt": "Three-dimensional executive boardroom and city skyline",
+    "category": "Management",
+    "layout": "tall",
+    "published": true
+  },
+  {
+    "image": "/assets/1000597053.jpg",
+    "caption": "Project management systems working together",
+    "alt": "Project management system illustration",
+    "category": "Delivery",
+    "layout": "standard",
+    "published": true
+  },
+  {
+    "image": "/assets/1000597044.jpg",
+    "caption": "Sustainable growth built step by step",
+    "alt": "Growth chart made from coins",
+    "category": "Growth",
+    "layout": "standard",
+    "published": true
+  },
+  {
+    "image": "/assets/1000597042.jpg",
+    "caption": "Connecting local insight to wider opportunity",
+    "alt": "Handshake with a digital globe",
+    "category": "Connection",
+    "layout": "wide",
+    "published": true
+  },
+  {
+    "image": "/assets/1000597037.jpg",
+    "caption": "Analysis that turns evidence into direction",
+    "alt": "Consultant using a magnifying glass and laptop",
+    "category": "Insight",
+    "layout": "standard",
+    "published": true
+  }
+]

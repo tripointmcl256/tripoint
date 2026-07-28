@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore the Tripoint visual gallery—ideas, partnerships, systems and progress in focus.">
+  <title>Gallery | Tripoint Management Consult</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="inner-page gallery-page">
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/tripoint-logo-transparent.png" alt="Tripoint"></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="about.html">About</a>
+      <details class="nav-group"><summary>What we do <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown"><a href="expertise.html">Expertise</a><a href="approach.html">Approach</a><a href="sectors.html">Sectors</a></div></details>
+      <a href="gallery.html">Gallery</a><a href="blog.html">Blog</a>
+    </nav>
+    <a class="nav-cta" href="contact.html">Start a conversation <span>↗</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"><a href="about.html">About</a><details class="mobile-nav-group"><summary>What we do</summary><div><a href="expertise.html">Expertise</a><a href="approach.html">Approach</a><a href="sectors.html">Sectors</a></div></details><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
+  </header>
+
+  <main>
+    <section class="editorial-hero gallery-hero">
+      <div class="editorial-hero-copy reveal">
+        <p class="section-kicker">Tripoint gallery</p>
+        <h1>Ideas in motion.<br><em>Impact in view.</em></h1>
+        <p>A growing visual record of the partnerships, systems, decisions and ambitions that shape our work.</p>
+        <a class="text-link dark" href="#gallery-grid">Explore the collection <span>↓</span></a>
+      </div>
+      <div class="gallery-hero-collage reveal" aria-hidden="true">
+        <figure class="gallery-hero-main"><img src="assets/hero-handshake-background.jpg" alt=""></figure>
+        <figure class="gallery-hero-float"><img src="assets/hero-boardroom-city-3d.png" alt=""></figure>
+        <span>Strategy<br>meets action</span>
+      </div>
+    </section>
+
+    <section class="page-section gallery-section" id="gallery-grid">
+      <div class="gallery-heading reveal">
+        <div><p class="section-kicker">Selected visuals</p><h2>A different angle on<br><em>management and growth.</em></h2></div>
+        <p>Choose any image to view it in detail. Real project, team and event photography can be added to this collection as it becomes available.</p>
+      </div>
+      <div class="gallery-grid">
+        <button class="gallery-card gallery-card-wide reveal" type="button" data-gallery-src="assets/hero-handshake-background.jpg" data-gallery-caption="Partnership and shared purpose">
+          <img src="assets/hero-handshake-background.jpg" alt="Business partners shaking hands">
+          <span><small>Partnership</small><strong>Shared purpose</strong><b>View ↗</b></span>
+        </button>
+        <button class="gallery-card gallery-card-tall reveal" type="button" data-gallery-src="assets/hero-boardroom-city-3d.png" data-gallery-caption="Management, coordination and collective decisions">
+          <img src="assets/hero-boardroom-city-3d.png" alt="Three-dimensional boardroom and city">
+          <span><small>Management</small><strong>Collective decisions</strong><b>View ↗</b></span>
+        </button>
+        <button class="gallery-card reveal" type="button" data-gallery-src="assets/1000597053.jpg" data-gallery-caption="Project management systems working together">
+          <img src="assets/1000597053.jpg" alt="Project management system illustration">
+          <span><small>Delivery</small><strong>Systems that connect</strong><b>View ↗</b></span>
+        </button>
+        <button class="gallery-card reveal" type="button" data-gallery-src="assets/1000597044.jpg" data-gallery-caption="Sustainable growth built step by step">
+          <img src="assets/1000597044.jpg" alt="Growth chart made from coins">
+          <span><small>Growth</small><strong>Progress that compounds</strong><b>View ↗</b></span>
+        </button>
+        <button class="gallery-card gallery-card-wide reveal" type="button" data-gallery-src="assets/1000597042.jpg" data-gallery-caption="Connecting local insight to wider opportunity">
+          <img src="assets/1000597042.jpg" alt="Handshake with a digital globe">
+          <span><small>Connection</small><strong>Local insight, wider reach</strong><b>View ↗</b></span>
+        </button>
+        <button class="gallery-card reveal" type="button" data-gallery-src="assets/1000597037.jpg" data-gallery-caption="Analysis that turns evidence into direction">
+          <img src="assets/1000597037.jpg" alt="Consultant using a magnifying glass and laptop">
+          <span><small>Insight</small><strong>Evidence into direction</strong><b>View ↗</b></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="page-cta"><h2>Have a story worth<br><em>building together?</em></h2><a class="button primary" href="contact.html">Start a conversation ↗</a></section>
+  </main>
+
+  <dialog class="gallery-lightbox" aria-label="Gallery image viewer">
+    <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+    <figure><img src="" alt=""><figcaption></figcaption></figure>
+  </dialog>
+
+  <footer class="simple-footer"><img src="assets/tripoint-logo-transparent.png" alt="Tripoint"><p>Arua City, Uganda · Nationwide coverage</p><p>© <span id="year"></span> Tripoint Management Consult Ltd.</p></footer>
+</body>
+</html>

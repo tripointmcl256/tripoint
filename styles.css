@@ -271,8 +271,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 
-/* Three-dimensional management word-cloud hero artwork */
-.hero-wordcloud{position:absolute;z-index:3;width:680px;height:auto;max-width:none;right:-38px;bottom:118px;object-fit:contain;transform-origin:center;transform:perspective(1100px) rotateY(-9deg) rotateX(2deg) rotateZ(-1deg) translateZ(34px);filter:drop-shadow(20px 34px 22px rgba(0,0,0,.52)) drop-shadow(-8px 10px 12px rgba(32,198,174,.16))}
-.hero-art:after{width:460px;height:42px;right:-1%;bottom:105px;filter:blur(22px);opacity:.7}
-@media(max-width:900px){.hero-wordcloud{width:450px;right:-78px;bottom:128px;transform:perspective(900px) rotateY(-8deg) rotateX(2deg) rotateZ(-1deg) translateZ(24px);filter:drop-shadow(14px 25px 16px rgba(0,0,0,.5))}.hero-art:after{width:320px;right:-10%;bottom:112px}}
-@media(max-width:600px){.hero-wordcloud{width:230px;right:-55px;bottom:145px;transform:perspective(700px) rotateY(-7deg) rotateX(2deg) rotateZ(-1deg) translateZ(16px);filter:drop-shadow(10px 18px 11px rgba(0,0,0,.5))}.hero-art:after{width:175px;height:25px;right:-18px;bottom:137px;filter:blur(13px)}}
+/* Three-dimensional executive boardroom hero artwork */
+.hero-boardroom{position:absolute;z-index:3;width:610px;height:auto;max-width:none;right:-42px;bottom:58px;object-fit:contain;transform-origin:center bottom;transform:perspective(1100px) rotateY(-7deg) rotateX(2deg) rotateZ(-1deg) translateZ(34px);filter:drop-shadow(20px 34px 22px rgba(0,0,0,.52)) drop-shadow(-8px 10px 12px rgba(32,198,174,.18))}
+.hero-art:after{width:455px;height:42px;right:-1%;bottom:48px;filter:blur(22px);opacity:.68}
+@media(max-width:900px){.hero-boardroom{width:415px;right:-74px;bottom:82px;transform:perspective(900px) rotateY(-6deg) rotateX(2deg) rotateZ(-1deg) translateZ(24px);filter:drop-shadow(14px 25px 16px rgba(0,0,0,.5))}.hero-art:after{width:305px;right:-10%;bottom:72px}}
+@media(max-width:600px){.hero-boardroom{width:225px;right:-51px;bottom:125px;transform:perspective(700px) rotateY(-5deg) rotateX(2deg) rotateZ(-1deg) translateZ(16px);filter:drop-shadow(10px 18px 11px rgba(0,0,0,.5))}.hero-art:after{width:165px;height:24px;right:-16px;bottom:117px;filter:blur(13px)}}

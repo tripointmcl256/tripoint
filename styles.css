@@ -320,6 +320,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
 
 /* Real Tripoint fieldwork */
 .fieldwork{position:relative;overflow:hidden;background:linear-gradient(145deg,#061d33 0%,#0a3a5d 58%,#075b68 100%);color:#fff}
+.hero + .fieldwork{padding-top:78px;border-top:1px solid rgba(116,234,217,.22)}
 .fieldwork:before{content:"";position:absolute;width:560px;height:560px;right:-180px;top:-260px;border:1px solid rgba(100,233,215,.24);border-radius:50%;box-shadow:0 0 0 90px rgba(100,233,215,.035),0 0 0 180px rgba(100,233,215,.025)}
 .fieldwork-heading{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:end;gap:7vw;margin-bottom:48px}
 .fieldwork-heading h2{margin:0;color:#fff}
@@ -473,6 +474,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
 }
 
 @media(max-width:600px){
+  .hero{margin-bottom:0;box-shadow:none}
+  .hero + .fieldwork{padding-top:52px}
   .fieldwork{padding-left:18px;padding-right:18px}
   .fieldwork:before{width:340px;height:340px;right:-190px;top:-120px}
   .fieldwork-heading h2{font-size:44px}

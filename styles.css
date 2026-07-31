@@ -318,6 +318,32 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
 .hub-label strong{font:italic clamp(25px,2.3vw,36px)/1.05 var(--serif)}
 .hub-label b{display:grid;width:46px;height:46px;border:1px solid rgba(255,255,255,.52);border-radius:50%;place-items:center}
 
+/* Real Tripoint fieldwork */
+.fieldwork{position:relative;overflow:hidden;background:linear-gradient(145deg,#061d33 0%,#0a3a5d 58%,#075b68 100%);color:#fff}
+.fieldwork:before{content:"";position:absolute;width:560px;height:560px;right:-180px;top:-260px;border:1px solid rgba(100,233,215,.24);border-radius:50%;box-shadow:0 0 0 90px rgba(100,233,215,.035),0 0 0 180px rgba(100,233,215,.025)}
+.fieldwork-heading{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:end;gap:7vw;margin-bottom:48px}
+.fieldwork-heading h2{margin:0;color:#fff}
+.fieldwork-heading h2 em{color:#63e6d3;font-weight:400}
+.fieldwork-heading>p{max-width:450px;margin:0;color:#b9cfda;font-size:16px;line-height:1.75}
+.fieldwork-collage{position:relative;z-index:1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(8,72px);gap:14px}
+.field-photo{position:relative;min-width:0;min-height:0;margin:0;overflow:hidden;background:#0a3150;box-shadow:0 24px 60px rgba(0,0,0,.25);isolation:isolate}
+.field-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(4,25,43,.86));z-index:1;pointer-events:none}
+.field-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.75,.25,1)}
+.field-photo:hover img{transform:scale(1.045)}
+.field-photo figcaption{position:absolute;z-index:2;left:22px;right:22px;bottom:19px;display:grid;gap:5px}
+.field-photo figcaption small{color:#70ead8;font-size:9px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.field-photo figcaption strong{font:italic clamp(20px,2vw,29px)/1.05 var(--serif)}
+.field-photo-main{grid-column:1/8;grid-row:1/7;border-radius:180px 24px 24px 24px}
+.field-photo-main img{object-position:center 42%}
+.field-photo-tall{grid-column:8/13;grid-row:1/5;border-radius:24px 160px 24px 24px}
+.field-photo-wide{grid-column:8/13;grid-row:5/9;border-radius:24px}
+.field-photo-small{grid-column:1/5;grid-row:7/9;border-radius:24px 24px 24px 120px}
+.fieldwork-note{grid-column:5/8;grid-row:7/9;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:22px 24px;border:1px solid rgba(255,255,255,.24);border-radius:24px;background:rgba(7,31,53,.72);backdrop-filter:blur(10px)}
+.fieldwork-note span{font:italic clamp(24px,2.2vw,34px)/.95 var(--serif);color:#fff}
+.fieldwork-note p{margin:10px 0 14px;color:#abc4d1;font-size:11px;line-height:1.5}
+.fieldwork-note a{color:#74ead9;font-size:10px;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:.08em}
+.fieldwork-note b{margin-left:7px}
+
 /* Shared editorial pages */
 .editorial-hero{min-height:700px;padding:165px 6vw 80px;display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:7vw;overflow:hidden;background:linear-gradient(135deg,#edf4f1,var(--paper))}
 .editorial-hero-copy{position:relative;z-index:2}
@@ -333,7 +359,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
 .gallery-hero-main:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,31,53,.05),rgba(7,31,53,.4))}
 .gallery-hero-main img{width:100%;height:100%;object-fit:cover}
 .gallery-hero-float{position:absolute;left:-2%;bottom:-5px;width:235px;height:235px;margin:0;padding:16px;border-radius:50%;background:var(--ink-2);box-shadow:0 25px 60px rgba(7,31,53,.32);z-index:2}
-.gallery-hero-float img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(10px 16px 12px rgba(0,0,0,.35))}
+.gallery-hero-float img{width:100%;height:100%;object-fit:cover;border-radius:50%;filter:drop-shadow(10px 16px 12px rgba(0,0,0,.35))}
 .gallery-hero-collage>span{position:absolute;right:-2%;top:10px;padding:20px 22px;background:var(--mint);color:var(--ink);font:italic 25px/1.05 var(--serif);transform:rotate(3deg);z-index:3}
 .gallery-heading,.insights-heading{display:flex;justify-content:space-between;align-items:end;gap:8vw;margin-bottom:48px}
 .gallery-heading h2,.insights-heading h2{font:400 clamp(46px,5vw,72px)/1 var(--serif);letter-spacing:-.04em;margin:20px 0 0}
@@ -434,4 +460,37 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
   .blog-card>div{padding:22px}
   .blog-subscribe{display:block;padding:65px 22px}
   .blog-subscribe>p{margin:25px 0}
+}
+
+/* CMS-managed photography */
+.page-hero-art img.cms-page-photo{width:96%;height:96%;object-fit:cover;object-position:center;border:10px solid rgba(255,255,255,.58);border-radius:52% 52% 26px 26px;filter:drop-shadow(16px 30px 20px rgba(7,31,53,.28));transform:perspective(900px) rotateY(-4deg) rotateZ(1.5deg)}
+
+@media(max-width:900px){
+  .fieldwork-heading{align-items:start;flex-direction:column;gap:22px}
+  .fieldwork-collage{grid-template-rows:repeat(8,62px)}
+  .fieldwork-note{padding:18px}
+  .fieldwork-note p{display:none}
+}
+
+@media(max-width:600px){
+  .fieldwork{padding-left:18px;padding-right:18px}
+  .fieldwork:before{width:340px;height:340px;right:-190px;top:-120px}
+  .fieldwork-heading h2{font-size:44px}
+  .fieldwork-heading>p{font-size:14px}
+  .fieldwork-collage{grid-template-columns:1.12fr .88fr;grid-template-rows:280px 230px 250px auto;gap:10px}
+  .field-photo-main{grid-column:1/-1;grid-row:1;border-radius:110px 18px 18px 18px}
+  .field-photo-tall{grid-column:1;grid-row:2;border-radius:18px}
+  .field-photo-small{grid-column:2;grid-row:2;border-radius:18px 18px 70px 18px}
+  .field-photo-wide{grid-column:1/-1;grid-row:3;border-radius:18px}
+  .fieldwork-note{grid-column:1/-1;grid-row:4;min-height:160px;padding:25px;border-radius:18px}
+  .fieldwork-note p{display:block;max-width:300px}
+  .field-photo figcaption{left:15px;right:15px;bottom:14px}
+  .field-photo figcaption strong{font-size:19px}
+  .field-photo-tall figcaption strong,.field-photo-small figcaption strong{font-size:16px}
+  .page-hero-art img.cms-page-photo{width:230px;height:300px;max-width:none;right:-72px;top:8px;border-width:6px;border-radius:48% 48% 18px 18px;object-position:center;transform:rotate(2deg)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .field-photo img{transition:none}
+  .field-photo:hover img{transform:none}
 }

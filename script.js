@@ -216,13 +216,46 @@ if (contactPanel) {
     <div class="contact-panel-socials"><span>Follow Tripoint</span>${contactSocialLinksMarkup}</div>`;
 }
 
-const fetchCmsData = async path => {
+const fetchCmsJson = async path => {
   const response = await fetch(path, { cache: 'no-store' });
   if (!response.ok) throw new Error(`Unable to load ${path}`);
-  const data = await response.json();
+  return response.json();
+};
+
+const fetchCmsData = async path => {
+  const data = await fetchCmsJson(path);
   if (!Array.isArray(data)) throw new Error(`${path} must contain a list`);
   return data;
 };
+
+const pageHeroImageKeys = {
+  'about.html': 'about_hero',
+  'expertise.html': 'expertise_hero',
+  'approach.html': 'approach_hero',
+  'sectors.html': 'sectors_hero'
+};
+
+fetchCmsJson('content/site-images.json').then(imageSlots => {
+  if (!imageSlots || Array.isArray(imageSlots) || typeof imageSlots !== 'object') return;
+
+  document.querySelectorAll('[data-cms-image]').forEach(image => {
+    const slot = imageSlots[image.dataset.cmsImage];
+    if (!slot?.image) return;
+    image.src = slot.image;
+    image.alt = slot.alt || image.alt;
+  });
+
+  const pageHeroImage = document.querySelector('.page-hero-art img');
+  const pageHeroKey = pageHeroImageKeys[currentPage];
+  const pageHeroSlot = pageHeroKey ? imageSlots[pageHeroKey] : null;
+  if (pageHeroImage && pageHeroSlot?.image) {
+    pageHeroImage.src = pageHeroSlot.image;
+    pageHeroImage.alt = pageHeroSlot.alt || pageHeroImage.alt;
+    pageHeroImage.classList.add('cms-page-photo');
+  }
+}).catch(() => {
+  // Keep the built-in page images visible if CMS data is temporarily unavailable.
+});
 
 const galleryGrid = document.querySelector('#cms-gallery-grid');
 if (galleryGrid) {

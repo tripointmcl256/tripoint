@@ -1,5 +1,61 @@
 [
   {
+    "image": "/assets/uploads/tripoint-community-demonstration.jpg",
+    "caption": "Listening, learning and demonstrating with communities",
+    "alt": "Tripoint facilitating a practical community demonstration beneath a large tree",
+    "category": "Community engagement",
+    "layout": "wide",
+    "published": true
+  },
+  {
+    "image": "/assets/uploads/tripoint-cabbage-field.jpg",
+    "caption": "Diversified production taking root",
+    "alt": "Rows of healthy cabbages growing in a well-managed field",
+    "category": "Food systems",
+    "layout": "tall",
+    "published": true
+  },
+  {
+    "image": "/assets/uploads/tripoint-stakeholder-training.jpg",
+    "caption": "Learning and coordination close to the work",
+    "alt": "A Tripoint facilitator leading an outdoor stakeholder learning session",
+    "category": "Capacity development",
+    "layout": "standard",
+    "published": true
+  },
+  {
+    "image": "/assets/uploads/tripoint-tomato-field-monitoring.jpg",
+    "caption": "Field monitoring for stronger production",
+    "alt": "A farmer inspecting rows of staked tomato plants",
+    "category": "Field monitoring",
+    "layout": "standard",
+    "published": true
+  },
+  {
+    "image": "/assets/uploads/tripoint-climate-smart-tomato-field.jpg",
+    "caption": "Practical agribusiness support in action",
+    "alt": "A wide tomato field using stakes and mulching to support crop production",
+    "category": "Agribusiness",
+    "layout": "wide",
+    "published": true
+  },
+  {
+    "image": "/assets/uploads/tripoint-equipment-distribution.jpg",
+    "caption": "Tools that strengthen local value chains",
+    "alt": "Community members gathered beside agricultural processing equipment",
+    "category": "Enterprise support",
+    "layout": "standard",
+    "published": true
+  },
+  {
+    "image": "/assets/uploads/tripoint-farm-field-visit.jpg",
+    "caption": "Grounded insight from producers and communities",
+    "alt": "Tripoint team members and a farmer examining crops during a field visit",
+    "category": "Field learning",
+    "layout": "wide",
+    "published": true
+  },
+  {
     "image": "/assets/hero-handshake-background.jpg",
     "caption": "Partnership and shared purpose",
     "alt": "Business partners shaking hands",

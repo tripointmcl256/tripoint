@@ -6,7 +6,83 @@ media:
     rename: safe
     extensions: [jpg, jpeg, png, webp]
 
+components:
+  page_image:
+    type: object
+    fields:
+      - name: image
+        label: Image
+        type: image
+        required: true
+        options:
+          media: images
+      - name: alt
+        label: Image description
+        type: string
+        required: true
+        description: Describe the image for people using screen readers.
+        options:
+          maxlength: 160
+
 content:
+  - name: site_images
+    label: Page images
+    type: file
+    path: content/site-images.json
+    format: json
+    fields:
+      - name: home_hero_art
+        label: Homepage hero artwork
+        component: page_image
+      - name: home_approach_visual
+        label: Homepage approach image
+        component: page_image
+      - name: home_sectors_project_visual
+        label: Homepage sectors left image
+        component: page_image
+      - name: home_sectors_growth_visual
+        label: Homepage sectors right image
+        component: page_image
+      - name: home_field_main
+        label: Fieldwork collage main image
+        component: page_image
+      - name: home_field_tall
+        label: Fieldwork collage tall image
+        component: page_image
+      - name: home_field_wide
+        label: Fieldwork collage wide image
+        component: page_image
+      - name: home_field_small
+        label: Fieldwork collage small image
+        component: page_image
+      - name: home_gallery_card
+        label: Homepage Gallery card
+        component: page_image
+      - name: home_blog_card
+        label: Homepage Blog card
+        component: page_image
+      - name: home_contact_visual
+        label: Homepage contact artwork
+        component: page_image
+      - name: about_hero
+        label: About page hero image
+        component: page_image
+      - name: expertise_hero
+        label: Expertise page hero image
+        component: page_image
+      - name: approach_hero
+        label: Approach page hero image
+        component: page_image
+      - name: sectors_hero
+        label: Sectors page hero image
+        component: page_image
+      - name: gallery_hero_main
+        label: Gallery page main hero image
+        component: page_image
+      - name: gallery_hero_accent
+        label: Gallery page accent image
+        component: page_image
+
   - name: gallery
     label: Gallery images
     type: file

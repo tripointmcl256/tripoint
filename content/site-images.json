@@ -1,0 +1,70 @@
+{
+  "home_hero_art": {
+    "image": "/assets/hero-boardroom-city-3d.png",
+    "alt": "Three-dimensional executive boardroom and city skyline"
+  },
+  "home_approach_visual": {
+    "image": "/assets/consultant-cutout.png",
+    "alt": "A consultant analysing business growth"
+  },
+  "home_sectors_project_visual": {
+    "image": "/assets/project-management-cutout.png",
+    "alt": "Project management system"
+  },
+  "home_sectors_growth_visual": {
+    "image": "/assets/capital-cutout.png",
+    "alt": "Investment capital held in hand"
+  },
+  "home_field_main": {
+    "image": "/assets/uploads/tripoint-community-demonstration.jpg",
+    "alt": "Tripoint facilitating a community demonstration beneath a large tree"
+  },
+  "home_field_tall": {
+    "image": "/assets/uploads/tripoint-cabbage-field.jpg",
+    "alt": "A thriving cabbage field supported through practical agricultural work"
+  },
+  "home_field_wide": {
+    "image": "/assets/uploads/tripoint-climate-smart-tomato-field.jpg",
+    "alt": "A climate-smart tomato field in north-western Uganda"
+  },
+  "home_field_small": {
+    "image": "/assets/uploads/tripoint-farm-field-visit.jpg",
+    "alt": "Tripoint team members and a farmer examining crops during a field visit"
+  },
+  "home_gallery_card": {
+    "image": "/assets/uploads/tripoint-stakeholder-training.jpg",
+    "alt": "Tripoint facilitating an outdoor stakeholder training"
+  },
+  "home_blog_card": {
+    "image": "/assets/uploads/tripoint-tomato-field-monitoring.jpg",
+    "alt": "Field monitoring in a productive tomato garden"
+  },
+  "home_contact_visual": {
+    "image": "/assets/project-management-transparent.png",
+    "alt": "Project management illustration"
+  },
+  "about_hero": {
+    "image": "/assets/uploads/tripoint-community-demonstration.jpg",
+    "alt": "Tripoint engaging with community members during a practical demonstration"
+  },
+  "expertise_hero": {
+    "image": "/assets/uploads/tripoint-cabbage-field.jpg",
+    "alt": "A productive cabbage field representing practical agricultural expertise"
+  },
+  "approach_hero": {
+    "image": "/assets/uploads/tripoint-stakeholder-training.jpg",
+    "alt": "Tripoint leading a collaborative stakeholder learning session"
+  },
+  "sectors_hero": {
+    "image": "/assets/uploads/tripoint-farm-field-visit.jpg",
+    "alt": "A field visit with farmers in a thriving agricultural landscape"
+  },
+  "gallery_hero_main": {
+    "image": "/assets/uploads/tripoint-stakeholder-training.jpg",
+    "alt": "Tripoint facilitating an outdoor stakeholder training"
+  },
+  "gallery_hero_accent": {
+    "image": "/assets/uploads/tripoint-equipment-distribution.jpg",
+    "alt": "Community members receiving locally relevant agricultural equipment"
+  }
+}

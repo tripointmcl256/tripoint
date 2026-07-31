@@ -1,35 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.tripointmcl.com/</loc>
     <lastmod>2026-07-31</lastmod>
+    <image:image>
+      <image:loc>https://www.tripointmcl.com/assets/uploads/tripoint-community-demonstration.jpg</image:loc>
+      <image:title>Tripoint community engagement and practical fieldwork</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.tripointmcl.com/about.html</loc>
     <lastmod>2026-07-31</lastmod>
+    <image:image>
+      <image:loc>https://www.tripointmcl.com/assets/uploads/tripoint-community-demonstration.jpg</image:loc>
+      <image:title>About Tripoint Management Consult</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.tripointmcl.com/expertise.html</loc>
     <lastmod>2026-07-31</lastmod>
+    <image:image>
+      <image:loc>https://www.tripointmcl.com/assets/uploads/tripoint-cabbage-field.jpg</image:loc>
+      <image:title>Tripoint consulting services and agricultural fieldwork</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.tripointmcl.com/approach.html</loc>
     <lastmod>2026-07-31</lastmod>
+    <image:image>
+      <image:loc>https://www.tripointmcl.com/assets/uploads/tripoint-stakeholder-training.jpg</image:loc>
+      <image:title>Tripoint stakeholder learning and consulting approach</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.tripointmcl.com/sectors.html</loc>
     <lastmod>2026-07-31</lastmod>
+    <image:image>
+      <image:loc>https://www.tripointmcl.com/assets/uploads/tripoint-farm-field-visit.jpg</image:loc>
+      <image:title>Tripoint agriculture and community field support</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.tripointmcl.com/gallery.html</loc>
     <lastmod>2026-07-31</lastmod>
+    <image:image>
+      <image:loc>https://www.tripointmcl.com/assets/uploads/tripoint-community-demonstration.jpg</image:loc>
+      <image:title>Community engagement in Uganda</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tripointmcl.com/assets/uploads/tripoint-cabbage-field.jpg</image:loc>
+      <image:title>Food systems and agricultural development</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tripointmcl.com/assets/uploads/tripoint-stakeholder-training.jpg</image:loc>
+      <image:title>Stakeholder training and capacity development</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tripointmcl.com/assets/uploads/tripoint-farm-field-visit.jpg</image:loc>
+      <image:title>Field learning with producers and communities</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.tripointmcl.com/blog.html</loc>
     <lastmod>2026-07-31</lastmod>
+    <image:image>
+      <image:loc>https://www.tripointmcl.com/assets/uploads/tripoint-stakeholder-training.jpg</image:loc>
+      <image:title>Tripoint management and development consulting insights</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.tripointmcl.com/contact.html</loc>
     <lastmod>2026-07-31</lastmod>
+    <image:image>
+      <image:loc>https://www.tripointmcl.com/assets/hero-handshake-background.jpg</image:loc>
+      <image:title>Contact Tripoint Management Consult in Arua City, Uganda</image:title>
+    </image:image>
   </url>
 </urlset>

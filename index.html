@@ -8,8 +8,10 @@
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="author" content="Tripoint Management Consult Limited">
   <link rel="canonical" href="https://www.tripointmcl.com/">
-  <link rel="icon" type="image/png" href="/assets/tripoint-logo-transparent.png">
-  <link rel="apple-touch-icon" href="/assets/tripoint-logo-transparent.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/tripoint-favicon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/assets/tripoint-favicon-192.png">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  <link rel="preload" as="image" href="/assets/hero-handshake-background.jpg" fetchpriority="high">
   <meta name="theme-color" content="#082f52">
   <meta property="og:locale" content="en_UG">
   <meta property="og:type" content="website">
@@ -40,16 +42,18 @@
         "@type": "Organization",
         "@id": "https://www.tripointmcl.com/#organization",
         "name": "Tripoint Management Consult Limited",
-        "alternateName": "Tripoint MCL",
+        "legalName": "Tripoint Management Consult Limited",
+        "alternateName": ["Tripoint MCL", "Tripoint Management Consult Ltd"],
         "url": "https://www.tripointmcl.com/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.tripointmcl.com/assets/tripoint-logo-transparent.png",
-          "width": 199,
-          "height": 198
+          "url": "https://www.tripointmcl.com/assets/tripoint-favicon-192.png",
+          "width": 192,
+          "height": 192
         },
         "image": "https://www.tripointmcl.com/assets/uploads/tripoint-community-demonstration.jpg",
         "description": "A Ugandan management and technical consulting firm helping organisations turn complex challenges into practical action and lasting results.",
+        "slogan": "Stronger decisions. Stronger systems. Sustainable results.",
         "email": "tripoint.mcl@gmail.com",
         "telephone": "+256393002945",
         "address": {
@@ -65,6 +69,55 @@
           "https://www.instagram.com/tripointmcl?igsh=d2ttaHVlMGEzZnpx",
           "https://www.tiktok.com/@tripoint.mcl?_r=1&_t=ZS-98UwJ0Vurgb"
         ],
+        "knowsAbout": [
+          "Project and programme design",
+          "Project and programme management",
+          "Monitoring, evaluation, accountability and learning",
+          "Research and knowledge management",
+          "Strategy and management advisory",
+          "Institutional strengthening",
+          "Capacity development",
+          "Enterprise and agribusiness development",
+          "Digital management systems"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Management and technical consulting services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Project and programme consulting",
+                "url": "https://www.tripointmcl.com/expertise.html"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Monitoring, evaluation, accountability and learning",
+                "url": "https://www.tripointmcl.com/expertise.html"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Research, strategy and institutional strengthening",
+                "url": "https://www.tripointmcl.com/expertise.html"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Agribusiness and enterprise development",
+                "url": "https://www.tripointmcl.com/expertise.html"
+              }
+            }
+          ]
+        },
         "contactPoint": [
           {
             "@type": "ContactPoint",
@@ -122,7 +175,7 @@
       </div>
       <div class="hero-art reveal" aria-label="A three-dimensional boardroom scene representing management, strategy and growth">
         <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
-        <img class="hero-cutout hero-boardroom" data-cms-image="home_hero_art" src="assets/hero-boardroom-city-3d.png" alt="Three-dimensional executive boardroom and city skyline">
+        <img class="hero-cutout hero-boardroom" data-cms-image="home_hero_art" src="assets/hero-boardroom-city-3d.png" alt="Three-dimensional executive boardroom and city skyline" width="1254" height="1254" loading="eager" fetchpriority="high" decoding="async">
         <div class="floating-card card-insight"><small>01</small><strong>Insight</strong><p>See the real challenge.</p></div>
         <div class="floating-card card-impact"><small>03</small><strong>Impact</strong><p>Make progress endure.</p></div>
         <a class="stamp" href="approach.html" aria-label="Explore Tripoint's approach">Strategy<br><span>that moves</span><br>people ↗</a>

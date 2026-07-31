@@ -4,6 +4,7 @@ const siteHeader = document.querySelector('.site-header');
 const desktopNav = document.querySelector('.desktop-nav');
 
 const desktopNavigationMarkup = `
+  <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <details class="nav-group">
     <summary>What we do <span aria-hidden="true">⌄</span></summary>
@@ -17,6 +18,7 @@ const desktopNavigationMarkup = `
   <a href="blog.html">Blog</a>`;
 
 const mobileNavigationMarkup = `
+  <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <details class="mobile-nav-group">
     <summary>What we do</summary>
@@ -189,15 +191,15 @@ const footerLinksMarkup = `
     <a href="mailto:tripoint.mcl@gmail.com"><img src="assets/gmail.jpg" alt=""><span><small>Email</small><strong>tripoint.mcl@gmail.com</strong></span><b>↗</b></a>
     <a href="tel:+256393002945"><img src="assets/phone.jpg" alt=""><span><small>Call</small><strong>0393 002 945</strong></span><b>↗</b></a>
     <a href="https://wa.me/256781678974" target="_blank" rel="noopener"><img src="assets/whatsapp.jpg" alt=""><span><small>WhatsApp</small><strong>Chat with Tripoint</strong></span><b>↗</b></a>
-    <a href="https://www.instagram.com/" target="_blank" rel="noopener"><img src="assets/instagram.jpg" alt=""><span><small>Instagram</small><strong>@tripoint.mcl</strong></span><b>↗</b></a>
-    <a href="https://www.tiktok.com/" target="_blank" rel="noopener"><img src="assets/tiktok.jpg" alt=""><span><small>TikTok</small><strong>@tripoint.mcl</strong></span><b>↗</b></a>
+    <a href="https://www.instagram.com/tripointmcl?igsh=d2ttaHVlMGEzZnpx" target="_blank" rel="noopener"><img src="assets/instagram.jpg" alt=""><span><small>Instagram</small><strong>@tripointmcl</strong></span><b>↗</b></a>
+    <a href="https://www.tiktok.com/@tripoint.mcl?_r=1&_t=ZS-98UwJ0Vurgb" target="_blank" rel="noopener"><img src="assets/tiktok.jpg" alt=""><span><small>TikTok</small><strong>@tripoint.mcl</strong></span><b>↗</b></a>
     <a href="https://www.google.com/maps/search/?api=1&query=Arua+City+Uganda" target="_blank" rel="noopener"><img src="assets/maps.jpg" alt=""><span><small>Find us</small><strong>Arua City, Uganda</strong></span><b>↗</b></a>
   </div>`;
 
 const contactSocialLinksMarkup = `
   <div class="social-links footer-socials" aria-label="Tripoint social media">
-    <a href="https://www.instagram.com/" target="_blank" rel="noopener"><img src="assets/instagram.jpg" alt=""><span>Instagram</span></a>
-    <a href="https://www.tiktok.com/" target="_blank" rel="noopener"><img src="assets/tiktok.jpg" alt=""><span>TikTok</span></a>
+    <a href="https://www.instagram.com/tripointmcl?igsh=d2ttaHVlMGEzZnpx" target="_blank" rel="noopener"><img src="assets/instagram.jpg" alt=""><span>Instagram · @tripointmcl</span></a>
+    <a href="https://www.tiktok.com/@tripoint.mcl?_r=1&_t=ZS-98UwJ0Vurgb" target="_blank" rel="noopener"><img src="assets/tiktok.jpg" alt=""><span>TikTok · @tripoint.mcl</span></a>
   </div>`;
 
 document.querySelectorAll('.simple-footer').forEach(footer => {
